@@ -9,10 +9,12 @@ import java.awt.*;
 public class Route extends JPanel {
 
 
+
     public Route()
     {
        // this.setLocation(40, 40);
         this.setVisible(true);
+        this.setSize(300, 5);
 
     }
 
@@ -28,7 +30,8 @@ public class Route extends JPanel {
 
     private void dessin(Graphics g) {
 
-        g.fillRect(50, 300, 300, 15);
+        g.drawLine(20, 260, 600, 260);
+        g.drawLine(20, 290, 600, 290);
     }
 
 

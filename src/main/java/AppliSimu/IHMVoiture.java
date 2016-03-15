@@ -1,9 +1,6 @@
 package AppliSimu;
 
-import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.Graphics;
-import java.awt.Panel;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Observable;
@@ -21,12 +18,19 @@ public class IHMVoiture extends JFrame implements Observer{
 	private double paramatreConversionMetresPixels = 0.5;
 	private Voiture maVoiture;
 	private CommandeVoiture maCommandeVoiture;
+    Route r;
 	
 	private void initGraphique() {
 		this.setTitle("Simulateur de Voiture");
 		this.setSize(505, 505);
 
+
+
 		this.maCommandeVoiture = new CommandeVoiture(this, maVoiture);
+ //       r = new Route();
+ //   this.add(r);
+
+        maCommandeVoiture.validate();
 
 		this.setVisible(true);
 	}
@@ -67,9 +71,17 @@ public class IHMVoiture extends JFrame implements Observer{
 	private void dessinerVoiture(Graphics contexteGraphique) {
 		int xMetres = maVoiture.getX();
 		int xPixel = calculerPositionPixels(xMetres);
-		contexteGraphique.fillRect(xPixel, 300, 30, 15);
+
+        contexteGraphique.setColor(Color.black);
+        contexteGraphique.fillRect(10, 295, 600, 30);
+        contexteGraphique.setColor(Color.red);
+        contexteGraphique.fillRect(xPixel, 300, 30, 15);
+
+//        contexteGraphique.drawLine(20, 295, 600, 295);
+//        contexteGraphique.drawLine(20, 320, 600, 320);
+
 	}
 
 
-	
+
 }

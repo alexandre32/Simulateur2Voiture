@@ -1,6 +1,6 @@
 package AppliSimu;
 
-import java.awt.FlowLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -15,13 +15,13 @@ public class CommandeVoiture extends JPanel implements ActionListener{
 	private JButton boutonAccelerer;
 	private JButton boutonInverserDirection;
 	private Voiture maVoiture;
-	
+
 	
 	public CommandeVoiture (JFrame fenetre, Voiture maVoiture) {
 		
 		super();
-		this.setLayout(new FlowLayout());
- 
+		//this.setLayout(new FlowLayout());
+
 		boutonAccelerer = new JButton("Accelerer");
 		boutonAccelerer.addActionListener(this);
 		this.add(boutonAccelerer);
