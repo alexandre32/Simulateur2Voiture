@@ -35,7 +35,10 @@ public class IHMVoiture extends JFrame implements Observer{
 		super();
 		this.maVoiture = maVoiture;
 		maVoiture.addObserver(this);
+        Route r = new Route();
+        r.setLocation(40, 40);
 		initGraphique();
+
 	}
 
 	public IHMVoiture() {
@@ -66,5 +69,7 @@ public class IHMVoiture extends JFrame implements Observer{
 		int xPixel = calculerPositionPixels(xMetres);
 		contexteGraphique.fillRect(xPixel, 300, 30, 15);
 	}
+
+
 	
 }

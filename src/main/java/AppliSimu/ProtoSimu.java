@@ -15,17 +15,19 @@ public class ProtoSimu {
 
 		final Voiture maVoiture = new Voiture (100, 0, 10);
 		IHMVoiture monTriangle = new IHMVoiture(maVoiture);
-		
+
 		Timer timerAvancer = new Timer(dureeUneSecondeEnMilliSecondes, new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				maVoiture.miseAJourPosition();
 			}
 		});
-		
+
 		timerAvancer.start();
-		
+
+
+
 		while(true){
 		}
 
